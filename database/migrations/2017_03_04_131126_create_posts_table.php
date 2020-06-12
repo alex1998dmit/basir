@@ -16,6 +16,9 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->text('annotation');
+            $table->text('annotation_eng');
+            $table->text('book_list');
             $table->text('body');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();

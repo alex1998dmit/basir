@@ -15,10 +15,18 @@
                     </div>
 
                     <div class="panel-body">
+                        <hr>
+                        <p>{{ $post->annotation }}</p>
+                        <hr>
+                        <p>{{ $post->annotation_eng }}</p>
+                        <hr>
                         <p>{{ $post->body }}</p>
 
                         <p><strong>Category: </strong>{{ $post->category->name }}</p>
                         <p><strong>Tags: </strong>{{ $post->tags->implode('name', ', ') }}</p>
+                        <hr>
+                        <p>{{ $post->book_list }}</p>
+
                     </div>
                 </div>
             </div>

@@ -38,9 +38,9 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required']);
+        $this->validate($request, ['name' => 'required', 'name_eng' => 'required']);
 
-        Tag::create(['name' => $request->name]);
+        Tag::create(['name' => $request->name, 'name_eng' => $request->name_eng]);
         flash()->overlay('Tag created successfully.');
 
         return redirect('/admin/tags');

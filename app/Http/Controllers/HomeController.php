@@ -34,4 +34,9 @@ class HomeController extends Controller
 
         return view('home', get_defined_vars());
     }
+
+    public function aboutMagazine()
+    {
+        return view('');
+    }
 }

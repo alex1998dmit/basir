@@ -48,7 +48,10 @@ class PostController extends Controller
         $post = Post::create([
             'title'       => $request->title,
             'body'        => $request->body,
-            'category_id' => $request->category_id
+            'category_id' => $request->category_id,
+            'annotation'  => $request->annotation,
+            'annotation_eng'  => $request->annotation_eng,
+            'book_list'   => $request->book_list,
         ]);
 
         $tagsId = collect($request->tags)->map(function($tag) {

@@ -14,6 +14,9 @@ class Post extends Model
         'title',
         'body',
         'user_id',
+        'annotation',
+        'book_list',
+        'annotation_eng',
         'category_id',
         'is_published'
     ];

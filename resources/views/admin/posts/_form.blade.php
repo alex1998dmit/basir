@@ -10,6 +10,30 @@
     </div>
 </div>
 
+<div class="form-group{{ $errors->has('annotation') ? ' has-error' : '' }}">
+    {!! Form::label('annotation', 'Аннотация', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+        {!! Form::textarea('annotation', null, ['class' => 'form-control', 'required']) !!}
+
+        <span class="help-block">
+            <strong>{{ $errors->first('annotation') }}</strong>
+        </span>
+    </div>
+</div>
+
+<div class="form-group{{ $errors->has('annotation_eng') ? ' has-error' : '' }}">
+    {!! Form::label('annotation_eng', 'Аннотация (англ)', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+        {!! Form::textarea('annotation_eng', null, ['class' => 'form-control', 'required']) !!}
+
+        <span class="help-block">
+            <strong>{{ $errors->first('annotation_eng') }}</strong>
+        </span>
+    </div>
+</div>
+
 <div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
     {!! Form::label('body', 'Body', ['class' => 'col-md-2 control-label']) !!}
 
@@ -30,6 +54,18 @@
 
         <span class="help-block">
             <strong>{{ $errors->first('category_id') }}</strong>
+        </span>
+    </div>
+</div>
+
+<div class="form-group{{ $errors->has('book_list') ? ' has-error' : '' }}">
+    {!! Form::label('book_list', 'Список литературы', ['class' => 'col-md-2 control-label']) !!}
+
+    <div class="col-md-8">
+        {!! Form::textarea('book_list', null, ['class' => 'form-control', 'required']) !!}
+
+        <span class="help-block">
+            <strong>{{ $errors->first('book_list') }}</strong>
         </span>
     </div>
 </div>

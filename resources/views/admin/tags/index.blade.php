@@ -19,6 +19,7 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
+                                    <th>Name Eng</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -26,6 +27,7 @@
                                 @forelse ($tags as $tag)
                                     <tr>
                                         <td>{{ $tag->name }}</td>
+                                        <td>{{ $tag->name_eng }}</td>
                                         <td>
                                             <a href="{{ url("/admin/tags/{$tag->id}/edit") }}" class="btn btn-xs btn-info">Edit</a>
                                             <a href="{{ url("/admin/tags/{$tag->id}") }}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Delete</a>

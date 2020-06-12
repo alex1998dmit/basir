@@ -38,6 +38,34 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('desc') ? ' has-error' : '' }}">
+                            <label for="desc" class="col-md-4 control-label">Должность</label>
+
+                            <div class="col-md-6">
+                                <input id="desc" type="text" class="form-control" name="desc" value="{{ old('desc') }}" required>
+
+                                @if ($errors->has('desc'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('desc') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('desc_eng') ? ' has-error' : '' }}">
+                            <label for="desc_eng" class="col-md-4 control-label">Должность (eng)</label>
+
+                            <div class="col-md-6">
+                                <input id="desc_eng" type="text" class="form-control" name="desc_eng" value="{{ old('desc_eng') }}" required>
+
+                                @if ($errors->has('desc_eng'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('desc_eng') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
