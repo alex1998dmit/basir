@@ -2,11 +2,11 @@
 
 @section('content')
     <div class="container">
-
-        @include('frontend._search')
-
         <div class="row">
-
+          <div class="col-md-12">
+            <h2>Выбранная категория: <b>{{ $category->name }}</b></h2>
+            <br>
+          </div>
             <div class="col-md-3">
                 @include('layouts.menu')
             </div>
@@ -48,11 +48,6 @@
                         </div>
                     </div>
                 @endforelse
-
-                <div align="center">
-                    {!! $posts->appends(['search' => request()->get('search')])->links() !!}
-                </div>
-
             </div>
 
         </dev>

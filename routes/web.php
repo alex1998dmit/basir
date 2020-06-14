@@ -14,6 +14,13 @@
 Route::get('/', 'BlogController@index');
 Route::get('/posts/{post}', 'BlogController@post');
 Route::post('/posts/{post}/comment', 'BlogController@comment')->middleware('auth');
+// example
+Route::get('/about', 'BlogController@aboutMagazine');
+Route::get('/category/{category}', 'BlogController@category');
+// get collegiya
+// get policy
+// rules
+// 
 
 Auth::routes();
 Route::get('/profile', 'Auth\\ProfileController@index')->middleware('auth');

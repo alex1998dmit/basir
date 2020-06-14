@@ -23,7 +23,7 @@
                         <p>{{ $post->body }}</p>
 
                         <p><strong>Category: </strong>{{ $post->category->name }}</p>
-                        <p><strong>Tags: </strong>{{ $post->tags->implode('name', ', ') }}</p>
+                        <p><strong>ключевые слова: </strong>{{ $post->tags->implode('name', ', ') }}</p>
                         <hr>
                         <p>{{ $post->book_list }}</p>
 
