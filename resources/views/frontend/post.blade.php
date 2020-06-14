@@ -15,7 +15,15 @@
                     </div>
 
                     <div class="panel-body">
+                        <b>Аннотация:</b>
+                        <p>{{ $post->annotation }}</p>
+                        <hr>
+                        <b>Аннотация (eng):</b>
+                        <p>{{ $post->annotation_eng }}</p>
+                        <hr>
+                        <b>Текст:</b>
                         <p>{{ $post->body }}</p>
+                        <hr>
                         <p>
                             Category: <span class="label label-success">{{ $post->category->name }}</span> <br>
                             Tags:
@@ -25,6 +33,8 @@
                                 <span class="label label-danger">No tag found.</span>
                             @endforelse
                         </p>
+                        <hr>
+                        <p>{{ $post->book_list }}</p>
                     </div>
                 </div>
 
